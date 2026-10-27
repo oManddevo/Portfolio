@@ -1,4 +1,4 @@
-# James Stearns — portfolio
+# Tim Stearns — portfolio
 
 A Next.js + TypeScript portfolio. All copy comes from the résumé and lives in `lib/content.ts`.
 
@@ -15,7 +15,7 @@ npm run dev        # http://localhost:3000
 
 ## Résumé download
 
-Put the PDF at `public/James_Stearns_Resume.pdf` and rebuild — a **Résumé** button appears in the hero.
+Put the PDF at `public/Tim_Stearns_Resume.pdf` and rebuild — a **Résumé** button appears in the hero.
 
 ## Deploy (Vercel)
 

@@ -1,61 +1,64 @@
-// All site copy lives here. Everything is taken from James's résumé — edit this file to update the site.
+// All site copy lives here. Everything is taken from Tim's résumé — edit this file to update the site.
 
 export const profile = {
-  name: "James Stearns",
-  firstName: "James",
-  role: "Senior Software Engineer",
-  focus: "Health tech & full-stack systems",
+  name: "Tim Stearns",
+  firstName: "Tim",
+  role: "Senior AI Full Stack Engineer",
+  focus: "Healthcare & LLM-powered products",
   location: "Columbia, SC",
   email: "jamesstearns917@gmail.com",
+  phone: "+1 (941) 417-0729",
   linkedin: "https://www.linkedin.com/in/james-s-760a10230/",
-  resumeFile: "James_Stearns_Resume.pdf", // drop the PDF into /public to show the résumé button
-  years: 12,
+  github: "https://github.com/newsfriend",
+  resumeFile: "Tim_Stearns_Resume.pdf", // drop the PDF into /public to show the résumé button
+  years: 11,
 };
 
 export const stack = [
   "Python",
-  "Flask",
-  "Django",
-  "React",
-  "NextJS",
+  "FastAPI",
   "TypeScript",
+  "Node.js",
+  "React",
+  "Next.js",
   "PostgreSQL",
-  "AWS Lambda",
-  "API Gateway",
-  "Amazon ECS",
-  "Docker",
-  "GitHub Actions",
+  "LangChain",
   "Claude",
-  "Cursor",
+  "Azure OpenAI",
+  "HL7 FHIR",
+  "AWS",
+  "Kubernetes",
+  "Terraform",
+  "Claude Code",
 ];
 
 export type Stat = { value: number; decimals?: number; suffix?: string; label: string };
 
 export const stats: Stat[] = [
-  { value: 12, label: "years of professional software engineering" },
-  { value: 99.9, decimals: 1, suffix: "%", label: "uptime baseline kept on healthcare systems" },
-  { value: 95, suffix: "%", label: "test coverage across PHI data-routing paths" },
-  { value: 40, suffix: "%", label: "faster feature delivery with an AI-forward workflow" },
-  { value: 30, suffix: "%", label: "more multi-tenant transaction throughput" },
-  { value: 6, label: "engineers mentored through pairing and code review" },
+  { value: 11, suffix: "+", label: "years of professional software engineering" },
+  { value: 20, suffix: "+", label: "hospitals on a HIPAA-compliant patient platform" },
+  { value: 99.9, decimals: 1, suffix: "%", label: "uptime kept through on-call ownership" },
+  { value: 25, suffix: "%", label: "less nurse documentation time with AI intake" },
+  { value: 35, suffix: "%", label: "less manual handling with an AI triage agent" },
+  { value: 40, suffix: "%", label: "faster delivery with AI-native development" },
 ];
 
 export const principles = [
   {
     title: "Patient experience",
-    body: "Unified patient portals with modern online scheduling, paperless check-in and automated reminders.",
+    body: "A HIPAA-compliant patient engagement platform used across 20+ hospitals, with passwordless WebAuthn login and an AI intake assistant.",
   },
   {
     title: "Secure by design",
-    body: "High-stakes transactions under strict compliance mandates, with 95% test coverage around sensitive PHI.",
+    body: "PHI de-identification, SMART on FHIR OAuth and PCI-scoped tokenization, with HIPAA, SOC 2 and PCI DSS practices and audit logging.",
   },
   {
     title: "Reliable in production",
-    body: "Full ownership of deployments, observability and incident management to preserve a 99.9% uptime baseline.",
+    body: "Architecture RFCs, 14 automated test suites and Docker/Terraform CI/CD, with on-call ownership that kept 99.9% uptime.",
   },
   {
     title: "Mentorship",
-    body: "Coaching engineers through pairing sessions and rigorous code reviews, and authoring architectural guidelines.",
+    body: "Mentored 6 engineers through 50+ code reviews and drove AI-native development with Claude Code and MCP across 3 pods.",
   },
 ];
 
@@ -71,56 +74,37 @@ export const experience: Role[] = [
   {
     company: "Airbnb",
     title: "Senior Software Engineer",
-    place: "New York, NY",
+    place: "Remote",
     period: "Jan 2024 — Present",
     points: [
-      "Hands-on technical lead for 4 multi-tenant platform services, end to end across Python backends and React/NextJS frontends.",
-      "Database optimizations and complex SQL that lifted multi-tenant transaction throughput by 30%.",
-      "Led an AI-forward workflow with Claude and Cursor across 3 engineering pods, delivering features 40% faster.",
-      "Mentored 6 junior and mid-level engineers and authored the team’s architectural guidelines.",
+      "Tech lead for 4 multi-tenant identity and payment-tokenization services behind guest checkout — Python and Java microservices on AWS EKS with REST, gRPC and WebSocket APIs.",
+      "Led the Checkout Tokenization Vault, moving card and identity data into PCI-scoped tokens across 5 storage tiers; 15 query optimizations lifted payment throughput by 30%.",
+      "Built an AI refund and dispute triage agent with LangChain, Claude and a pgvector RAG index, plus a Next.js review console, cutting manual handling time by 35%.",
+      "Drove AI-native development across 3 pods with Claude Code and MCP tooling (40% faster delivery) and mentored 6 engineers through 50+ code reviews.",
     ],
   },
   {
-    company: "HealthTap",
-    title: "Applied AI Engineer",
-    place: "San Francisco, CA",
-    period: "Jul 2021 — Dec 2023",
+    company: "Trinity Health",
+    title: "Senior Software Engineer",
+    place: "Livonia, MI",
+    period: "Jul 2019 — Dec 2023",
     points: [
-      "Built secure integration layers into legacy third-party systems, adding online scheduling, paperless check-in and automated reminders.",
-      "Scaled serverless workflows on AWS Lambda, API Gateway, S3 and ECS to orchestrate 12 parallel autonomous agent workflows.",
-      "Integrated 8 third-party data sources and payment providers under strict compliance mandates.",
-      "Owned deployments, observability and incidents — a 99.9% uptime baseline and 95% test coverage around sensitive PHI.",
+      "Founding full-stack engineer on a 0-to-1 digital health team, building a HIPAA-compliant multi-tenant patient engagement platform used across 20+ hospitals.",
+      "Built the Epic EHR integration layer on HL7 FHIR R4 and SMART on FHIR OAuth with passwordless WebAuthn patient login; tuned PostgreSQL sync jobs to cut PHI data latency by 30%.",
+      "Launched an AI clinical intake assistant with Azure OpenAI GPT-4, LangChain and a PHI de-identification pipeline, reducing nurse documentation time by 25%.",
+      "Authored architecture RFCs, built 14 automated test suites and Docker/Terraform CI/CD in GitHub Actions, and kept 99.9% uptime through on-call ownership.",
     ],
   },
   {
-    company: "HealthTap",
+    company: "Amazon",
     title: "Software Engineer",
-    place: "San Francisco, CA",
-    period: "Jul 2019 — Jun 2021",
-    points: [
-      "Decomposed 2 legacy monoliths into modular Python, Flask and TypeScript microservices.",
-      "Profiled PostgreSQL and MySQL data access to remove integration blocks, improving endpoint throughput by 30%.",
-      "Shipped consumer-facing screens and 5 internal React dashboards with real-time sync and accessibility compliance.",
-    ],
-  },
-  {
-    company: "Amazon",
-    title: "Full Stack Engineer",
     place: "Seattle, WA",
-    period: "Aug 2017 — Jun 2019",
+    period: "Jun 2015 — Jun 2019",
     points: [
-      "Shipped 25+ high-traffic features across billing, authentication and real-time transaction processing.",
-      "Built event-driven processing and REST integrations in Java and Go; maintained 3 CI/CD pipelines.",
-    ],
-  },
-  {
-    company: "Amazon",
-    title: "Backend Developer",
-    place: "Seattle, WA",
-    period: "Jun 2015 — Jun 2017",
-    points: [
-      "Built Java/Spring microservices and partner integrations compatible across 4 legacy networks.",
-      "Index tuning, schema optimization and caching cut query bottlenecks by 30% on 15 production Linux servers.",
+      "Shipped 25+ production features across e-commerce checkout, seller billing and identity verification for 5M+ active users — Java and Go services with React and Angular front ends.",
+      "Built an event-driven seller identity verification pipeline on Lambda, SQS, Kinesis and DynamoDB, cutting onboarding from 3 days to under 24 hours.",
+      "Integrated a SageMaker fraud-scoring model into checkout payment authorization, flagging high-risk orders in real time and reducing chargebacks by 18%.",
+      "Optimized 12 slow SQL queries to cut peak-day database runtime by 25%, and built 6 shared React component libraries for real-time analytics dashboards.",
     ],
   },
 ];
@@ -139,43 +123,43 @@ export type CaseStudy = {
 export const work: CaseStudy[] = [
   {
     id: "01",
-    title: "Patient access on top of legacy systems",
-    where: "HealthTap · Applied AI Engineer",
-    challenge: "Key workflows ran on dated legacy third-party frameworks.",
-    built: "Secure custom integration layers that plug into those frameworks, plus 8 third-party data-source and payment integrations.",
-    outcome: "Modern online scheduling, paperless check-in and automated reminders, under strict compliance mandates.",
-    metric: { value: "8", label: "integrations" },
-    tags: ["Python", "Integrations", "PHI", "Payments"],
+    title: "Epic EHR integration on HL7 FHIR",
+    where: "Trinity Health · Senior Software Engineer",
+    challenge: "A multi-tenant patient engagement platform, used across 20+ hospitals, had to exchange PHI with Epic securely.",
+    built: "The Epic integration layer on HL7 FHIR R4 and SMART on FHIR OAuth, with passwordless WebAuthn patient login and tuned PostgreSQL sync jobs.",
+    outcome: "PHI data latency cut by 30% on a HIPAA-compliant platform kept at 99.9% uptime.",
+    metric: { value: "30%", label: "lower PHI latency" },
+    tags: ["HL7 FHIR R4", "SMART on FHIR", "Epic", "WebAuthn", "PostgreSQL"],
   },
   {
     id: "02",
-    title: "Serverless agent orchestration on AWS",
-    where: "HealthTap · Applied AI Engineer",
-    challenge: "AI-powered feature sets built on secure automation servers and autonomous agent workflows.",
-    built: "Production-grade serverless workflows on Lambda, API Gateway, S3 and ECS, with distributed monitoring.",
-    outcome: "12 parallel autonomous agent workflows orchestrated, with a 99.9% uptime baseline preserved.",
-    metric: { value: "12", label: "parallel agent workflows" },
-    tags: ["AWS", "AI workflows", "Observability"],
+    title: "AI clinical intake assistant",
+    where: "Trinity Health · Senior Software Engineer",
+    challenge: "Patient-reported symptoms had to become structured clinical notes without exposing PHI.",
+    built: "An intake assistant on Azure OpenAI GPT-4 and LangChain, fed by a PHI de-identification pipeline.",
+    outcome: "Symptoms turned into structured notes automatically, reducing nurse documentation time by 25%.",
+    metric: { value: "25%", label: "less documentation time" },
+    tags: ["Azure OpenAI", "LangChain", "PHI de-identification", "Python"],
   },
   {
     id: "03",
-    title: "From monoliths to services",
-    where: "HealthTap · Software Engineer",
-    challenge: "A data-heavy healthcare application network built on 2 high-complexity legacy monoliths.",
-    built: "Decoupled, modular Python, Flask and TypeScript microservices, profiled data access, and 5 internal React dashboards.",
-    outcome: "Endpoint throughput up 30%, with every production incident tracked and tests running continuously in Git workflows.",
+    title: "Checkout Tokenization Vault",
+    where: "Airbnb · Senior Software Engineer",
+    challenge: "Card and identity data behind guest checkout had to move into PCI scope across 5 storage tiers.",
+    built: "PCI-scoped tokens across PostgreSQL, DynamoDB and Redis, plus 15 query optimizations, on Python and Java microservices on AWS EKS.",
+    outcome: "Payment throughput up 30%, with card and identity data held as PCI-scoped tokens.",
     metric: { value: "30%", label: "throughput gain" },
-    tags: ["Flask", "TypeScript", "React", "PostgreSQL"],
+    tags: ["Python", "Java", "PostgreSQL", "DynamoDB", "Redis"],
   },
   {
     id: "04",
-    title: "Multi-tenant platform, AI-forward team",
+    title: "AI refund & dispute triage agent",
     where: "Airbnb · Senior Software Engineer",
-    challenge: "A portfolio of 4 multi-tenant platform services, owned end to end as hands-on technical lead.",
-    built: "Database optimizations, complex SQL and schema modeling across 5 storage tiers, plus a daily Claude + Cursor workflow across 3 pods.",
-    outcome: "Transaction throughput up 30% and feature delivery 40% faster, with 6 engineers mentored.",
-    metric: { value: "40%", label: "faster delivery" },
-    tags: ["Python", "React / NextJS", "SQL", "Claude", "Cursor"],
+    challenge: "Refund and dispute cases were handled manually against policies and booking history.",
+    built: "A LangChain + Claude agent over a pgvector RAG index of policies and booking history, with a Next.js review console.",
+    outcome: "Manual handling time cut by 35%.",
+    metric: { value: "35%", label: "less manual handling" },
+    tags: ["LangChain", "Claude", "pgvector", "RAG", "Next.js"],
   },
 ];
 
@@ -183,52 +167,64 @@ export const fit = [
   {
     need: "Full-stack product engineering",
     level: "Required",
-    proof: "12 years end to end — Python/Flask services behind React/NextJS frontends.",
+    proof: "11+ years end to end — Python/FastAPI and TypeScript/Node.js services behind React/Next.js frontends.",
   },
   {
     need: "Modern backend framework",
     level: "Required",
-    proof: "Deep Python; Flask and Django services; monoliths decomposed into Flask microservices.",
+    proof: "FastAPI, Django and Node.js/Express; Python and Java microservices with REST, gRPC and WebSocket APIs.",
   },
   {
     need: "AI development tools",
     level: "Required",
-    proof: "Claude and Cursor daily; led an AI-forward workflow across 3 pods (40% faster delivery).",
+    proof: "Claude Code and MCP tooling daily; drove AI-native development across 3 pods (40% faster delivery).",
   },
   {
     need: "Relational databases",
     level: "Required",
-    proof: "PostgreSQL schema modeling, stored procedures and query tuning (+30% throughput).",
+    proof: "PostgreSQL sync jobs tuned to cut PHI latency 30%; 15 query optimizations lifted payment throughput 30%.",
   },
   {
     need: "Cloud environment",
     level: "Required",
-    proof: "AWS Lambda, API Gateway, S3 and ECS in production; CI/CD with GitHub Actions.",
+    proof: "AWS (EKS, Lambda, SQS, Kinesis, DynamoDB) and Azure; Docker, Kubernetes, Terraform and GitHub Actions CI/CD.",
   },
   {
     need: "Collaborative, empowering approach",
     level: "Required",
-    proof: "Mentored 6 engineers through pairing and reviews; authored architectural guidelines.",
+    proof: "Mentored 6 engineers through 50+ code reviews; authored architecture RFCs.",
   },
   {
     need: "Sensitive data / regulated environments",
     level: "Nice to have",
-    proof: "PHI and payment data under strict compliance mandates, with 95% coverage on routing paths.",
+    proof: "HIPAA PHI security and de-identification, SMART on FHIR, PCI-scoped tokenization and audit logging.",
   },
   {
     need: "AI product features",
     level: "Nice to have",
-    proof: "AI-powered feature sets and 12 parallel autonomous agent workflows at HealthTap.",
+    proof: "An AI clinical intake assistant (25% less documentation time) and a RAG triage agent (35% less handling time).",
   },
 ];
 
 export const skills = [
-  { group: "Languages", items: ["Python", "SQL", "TypeScript", "JavaScript", "Go", "Java", "C#", "Bash"] },
-  { group: "Frontend", items: ["React", "NextJS", "Responsive UI", "Accessibility", "HTML5", "CSS3"] },
-  { group: "Backend", items: ["Flask", "Django", "Node.js", "REST APIs", "Microservices", "API contracts"] },
-  { group: "Data", items: ["PostgreSQL", "MySQL", "Schema modeling", "Stored procedures", "Query tuning"] },
-  { group: "Cloud & DevOps", items: ["AWS", "Docker", "Linux", "Git", "GitHub Actions", "CI/CD"] },
-  { group: "AI", items: ["Claude", "Cursor", "ChatGPT", "Prompt engineering", "Agent workflows"] },
+  { group: "Languages", items: ["Python", "TypeScript", "JavaScript", "Java", "Go", "SQL", "C++", "Bash"] },
+  {
+    group: "Frontend",
+    items: ["React", "Next.js", "Angular", "Redux", "Tailwind CSS", "Responsive web UI", "Real-time dashboards", "HTML5", "CSS3"],
+  },
+  {
+    group: "Backend",
+    items: ["FastAPI", "Django", "Node.js", "Express", "REST & GraphQL APIs", "gRPC", "WebSockets", "Microservices", "Event-driven architecture"],
+  },
+  { group: "Data", items: ["PostgreSQL", "DynamoDB", "Redis", "pgvector", "Query optimization", "Kinesis", "SQS"] },
+  {
+    group: "Cloud & DevOps",
+    items: ["AWS", "Azure", "Docker", "Kubernetes", "Terraform", "GitHub Actions", "CI/CD", "Prometheus", "Grafana", "Datadog", "Git"],
+  },
+  {
+    group: "AI",
+    items: ["LLM integration", "RAG", "AI agents", "MCP", "LangChain", "Claude", "Claude Code", "Azure OpenAI", "Prompt engineering", "Vector DBs", "AWS SageMaker", "PyTorch"],
+  },
 ];
 
 export const education = [

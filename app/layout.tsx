@@ -6,15 +6,15 @@ const display = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", axes
 const body = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "James Stearns — Senior Software Engineer, Health Tech & Full-Stack",
+  title: "Tim Stearns — Senior AI Full Stack Engineer, Healthcare & LLM Products",
   description:
-    "Senior full-stack engineer with 12 years designing, building and operating cloud-native healthcare systems, unified patient portals and distributed data engines. Python/Flask, React/NextJS, PostgreSQL, AWS.",
-  authors: [{ name: "James Stearns" }],
+    "AI-native senior full-stack engineer with 11+ years building LLM-powered products, HIPAA-compliant healthcare platforms and high-traffic e-commerce systems. Python/FastAPI, TypeScript/Node.js, React/Next.js, AWS.",
+  authors: [{ name: "Tim Stearns" }],
   openGraph: {
     type: "website",
-    title: "James Stearns — Senior Software Engineer",
+    title: "Tim Stearns — Senior AI Full Stack Engineer",
     description:
-      "Turning fragmented clinical workflows into secure, empathetic, integrated digital health experiences.",
+      "LLM-powered, HIPAA-compliant healthcare products — RAG pipelines, AI agents and HL7 FHIR/EHR integration.",
   },
 };
 

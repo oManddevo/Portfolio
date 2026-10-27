@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties } from "react";
 import Pulse from "./Pulse";
 
-// An ~11 second animated "film" about James that plays before the site, once per browser session.
+// An ~11 second animated "film" about Tim that plays before the site, once per browser session.
 // Skippable (button, Esc, Enter, Space), replayable from the hero, and never autoplays for
 // visitors who prefer reduced motion or when the URL has ?nointro.
 
@@ -11,7 +11,7 @@ const SCENES = [0, 2300, 4600, 7000, 9200]; // start time of each scene, ms
 const DURATION = 11600;
 const CLOSE_MS = 900;
 const SEEN_KEY = "intro-seen";
-const CHIPS = ["Python", "Flask", "React", "NextJS", "PostgreSQL", "AWS", "Claude"];
+const CHIPS = ["Python", "FastAPI", "React", "Next.js", "LangChain", "Claude", "AWS"];
 
 type Phase = "idle" | "playing" | "closing";
 
@@ -90,7 +90,7 @@ export default function IntroFilm() {
       }
       if (s === 1 && yearsRef.current) {
         const p = clamp01((t - SCENES[1] - 250) / 1300);
-        yearsRef.current.textContent = String(Math.round(12 * (1 - Math.pow(1 - p, 3))));
+        yearsRef.current.textContent = String(Math.round(11 * (1 - Math.pow(1 - p, 3))));
       }
 
       if (t >= DURATION) finish();
@@ -121,7 +121,7 @@ export default function IntroFilm() {
       className={`film${phase === "closing" ? " film--closing" : ""}`}
       role="dialog"
       aria-modal="true"
-      aria-label="Intro film: about James Stearns"
+      aria-label="Intro film: about Tim Stearns"
     >
       <div className="film__glow" aria-hidden="true" />
       <div className="film__grain" aria-hidden="true" />
@@ -130,7 +130,7 @@ export default function IntroFilm() {
 
       <p className="film__label">
         <span className="film__rec" aria-hidden="true" />
-        James Stearns · intro
+        Tim Stearns · intro
       </p>
 
       <div
@@ -142,7 +142,7 @@ export default function IntroFilm() {
           <>
             <Pulse className="film__pulse" id={`film-pulse-${run}`} />
             <h2 className="film__hello">
-              <span>Hi,</span> <span>I&rsquo;m</span> <span>James.</span>
+              <span>Hi,</span> <span>I&rsquo;m</span> <span>Tim.</span>
             </h2>
           </>
         )}
@@ -161,9 +161,9 @@ export default function IntroFilm() {
           <>
             <p className="film__kicker">Designing, building &amp; operating</p>
             <ul className="film__list">
-              <li>unified patient portals.</li>
-              <li>cloud-native healthcare systems.</li>
-              <li>distributed data engines.</li>
+              <li>LLM-powered products.</li>
+              <li>HIPAA-compliant health platforms.</li>
+              <li>high-traffic e-commerce systems.</li>
             </ul>
           </>
         )}
@@ -178,19 +178,19 @@ export default function IntroFilm() {
                 </span>
               ))}
             </div>
-            <p className="film__caption">Python &amp; Flask behind. React &amp; NextJS in front.</p>
+            <p className="film__caption">Python &amp; FastAPI behind. React &amp; Next.js in front.</p>
           </>
         )}
 
         {scene === 4 && (
           <div className="film__title">
-            <p className="film__kicker">Senior Software Engineer</p>
+            <p className="film__kicker">Senior AI Full Stack Engineer</p>
             <h2>
-              James
+              Tim
               <br />
               <em>Stearns</em>
             </h2>
-            <p className="film__caption">Health tech &amp; full-stack systems</p>
+            <p className="film__caption">Healthcare &amp; LLM-powered products</p>
           </div>
         )}
       </div>

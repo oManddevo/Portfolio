@@ -34,7 +34,7 @@ export default function Home() {
           <div className="container nav__inner">
             <a href="#top" className="nav__brand">
               <span className="nav__dot" aria-hidden="true" />
-              James Stearns
+              {profile.name}
             </a>
             <ul className="nav__links">
               <li><a href="#about">About</a></li>
@@ -57,17 +57,20 @@ export default function Home() {
                   {profile.role} · {profile.focus}
                 </p>
                 <h1 data-reveal style={delay(1)}>
-                  Turning fragmented clinical workflows into <em>secure, empathetic</em> digital health.
+                  Building <em>LLM-powered</em> healthcare products that are secure by design.
                 </h1>
                 <p className="hero__lede" data-reveal style={delay(2)}>
-                  I&rsquo;m James, a senior full-stack engineer with {profile.years} years designing, building and
-                  operating cloud-native healthcare systems, unified patient portals and distributed data engines —
-                  Python and Flask behind, React and NextJS in front.
+                  I&rsquo;m {profile.firstName}, an AI-native senior full-stack engineer with {profile.years}+ years building
+                  LLM-powered products, HIPAA-compliant healthcare platforms and high-traffic e-commerce systems —
+                  Python and FastAPI behind, React and Next.js in front.
                 </p>
                 <div className="hero__actions" data-reveal style={delay(3)}>
                   <a className="btn" href="#work">See my work</a>
                   <a className="btn btn--outline" href={profile.linkedin} target="_blank" rel="noopener noreferrer">
                     LinkedIn <span aria-hidden="true">↗</span>
+                  </a>
+                  <a className="btn btn--outline" href={profile.github} target="_blank" rel="noopener noreferrer">
+                    GitHub <span aria-hidden="true">↗</span>
                   </a>
                   {hasResume && (
                     <a className="btn btn--outline" href={`/${profile.resumeFile}`} download>
@@ -94,8 +97,8 @@ export default function Home() {
                     <dd>99.9%</dd>
                   </div>
                   <div>
-                    <dt>Test coverage on PHI paths</dt>
-                    <dd>95%</dd>
+                    <dt>Less manual handling with AI</dt>
+                    <dd>35%</dd>
                   </div>
                   <div>
                     <dt>Faster delivery with AI tools</dt>
@@ -142,14 +145,14 @@ export default function Home() {
                 <SectionHead eyebrow="About" title={<>Healthcare systems, built <em>end to end</em></>} />
                 <div className="about__copy" data-reveal>
                   <p>
-                    I&rsquo;m a high-agency senior full-stack engineer and technical generalist. I manage a portfolio of
-                    high-stakes product features end to end — from relational schemas in PostgreSQL and scalable services
-                    on AWS to responsive React and NextJS applications.
+                    I&rsquo;m an AI-native senior full-stack engineer who ships end-to-end features across Python/FastAPI,
+                    TypeScript/Node.js and React/Next.js — from RAG pipelines and AI agents to HL7 FHIR/EHR integrations,
+                    PHI security and AWS/Kubernetes infrastructure.
                   </p>
                   <p>
-                    My work has focused on turning fragmented clinical workflows into secure, empathetic and integrated
-                    digital health experiences, while using AI development tools responsibly and mentoring engineering
-                    squads on technical and architectural standards.
+                    I&rsquo;ve built a HIPAA-compliant patient platform at Trinity Health, identity and payment services at
+                    Airbnb, and high-traffic e-commerce systems at Amazon. I work at startup speed on 0-to-1 products and use
+                    AI coding tools such as Claude Code daily to deliver faster without trading off reliability.
                   </p>
                 </div>
               </div>
@@ -171,7 +174,7 @@ export default function Home() {
               <SectionHead
                 eyebrow="Experience"
                 title="Where I’ve been"
-                sub="From backend services at Amazon to healthcare platforms at HealthTap and platform leadership at Airbnb."
+                sub="From e-commerce systems at Amazon to a 0-to-1 digital health platform at Trinity Health and checkout tech leadership at Airbnb."
               />
               <ol className="timeline">
                 {experience.map((role, i) => (
@@ -310,8 +313,14 @@ export default function Home() {
                 <a className="btn btn--light" href={`mailto:${profile.email}`}>
                   {profile.email}
                 </a>
+                <a className="btn btn--outline-light" href={`tel:${profile.phone.replace(/[^\d+]/g, "")}`}>
+                  {profile.phone}
+                </a>
                 <a className="btn btn--outline-light" href={profile.linkedin} target="_blank" rel="noopener noreferrer">
                   LinkedIn <span aria-hidden="true">↗</span>
+                </a>
+                <a className="btn btn--outline-light" href={profile.github} target="_blank" rel="noopener noreferrer">
+                  GitHub <span aria-hidden="true">↗</span>
                 </a>
               </div>
               <p className="contact__where">{profile.location}</p>
